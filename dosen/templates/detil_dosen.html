@@ -1,0 +1,25 @@
+{% extends 'index.html' %}
+{% load static %}
+
+{% block menu %}
+    <a href="karyawan">Data Karyawan</a>
+{% endblock menu %}
+    
+
+{% block content %}
+
+   <table border="1">
+    <tr>
+        <th>Nama</th>
+        <th>{{ data_dosen.nama }}</th>
+    </tr>
+    <tr>
+        <th>Alamat</th>
+        <th>{{ data_dosen.alamat }}</th>
+    </tr>
+    <tr>
+        <th>No HP</th>
+        <th>{{ data_dosen.no_hp }}</th>
+    </tr>    
+   </table>
+{% endblock content %}

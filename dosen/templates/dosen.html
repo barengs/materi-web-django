@@ -1,0 +1,25 @@
+{% extends 'index.html' %}
+{% load static %}
+
+{% block menu %}
+    <a href="karyawan">Data Karyawan</a>
+{% endblock menu %}
+    
+
+{% block content %}
+
+   <table border="1">
+    <tr>
+        <th>ID</th>
+        <th>NAMA</th>
+    </tr>
+    
+    {% for data in dosen %}
+    <tr>
+        <td>{{ data.id }}</td>
+        <td><a href="dosen/{{ data.id }}">{{ data.nama }}</a></td>
+    </tr>        
+    {% endfor %}
+        
+   </table>
+{% endblock content %}
